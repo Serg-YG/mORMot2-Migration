@@ -19,7 +19,7 @@ begin
   props := AServer.Model.Props[ormClass];
 
   sql := props.sql.SelectAllJoined;
-  sql := StringReplaceAll(sql, '`',     sApost);
+  sql := StringReplaceAll(sql, '`',     '''');
   sql := StringReplaceAll(sql, 'RowID', 'ID', True);
   if AFormatSQLJoin <> '' then
     sql := sql + FormatSql(SqlFromWhere(AFormatSQLJoin), AParamsSQLJoin, ABoundsSQLJoin);
