@@ -1,3 +1,9 @@
+implementation
+
+type
+  TOrmHack = class(TOrm);
+  TOrmFillHack = class(TOrmFill);
+  
 procedure FillPrepareJoined(const AServer: IRestOrmServer; AValue: TOrm;
   const AFormatSQLJoin: RawUtf8; const AParamsSQLJoin, ABoundsSQLJoin: array of const);
 var
